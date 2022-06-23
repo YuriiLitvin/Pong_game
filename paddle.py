@@ -15,3 +15,8 @@ class Paddle:
         self.paddle.setpos(X_POS, Y_POS)
         self.paddle.setheading(90)
 
+    def up(self):
+        self.paddle.forward(20)
+
+    def down(self):
+        self.paddle.backward(20)
