@@ -5,8 +5,9 @@ from paddle import Paddle
 screen = Screen()
 paddle = Paddle()
 
-screen.setup(width=1200, height=600)
 screen.bgcolor("black")
+screen.setup(width=800, height=600)
+screen.title("Pong")
 
 screen.listen()
 screen.onkey(paddle.up, "Up")
