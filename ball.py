@@ -13,6 +13,7 @@ class Ball(Turtle):
         step = 10
         x_cor = self.xcor()
         y_cor = self.ycor()
-        x_cor += step * 1.3
+        # x_cor += step * 1.3
+        x_cor += step
         y_cor += step
         self.setpos(x_cor, y_cor)

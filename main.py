@@ -26,8 +26,8 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     ball.move()
-    # if x_cor > 377 and y_cor > 278:
-    #     game_is_on = False
+    if ball.distance(ball.xcor(), 300) < 20 or ball.distance(ball.xcor(), -300) < 20:
+        game_is_on = False
     screen.update()
 
 
