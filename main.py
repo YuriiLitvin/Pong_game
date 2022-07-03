@@ -26,8 +26,12 @@ game_is_on = True
 while game_is_on:
     time.sleep(0.1)
     ball.move()
-    if ball.distance(ball.xcor(), 300) < 20 or ball.distance(ball.xcor(), -300) < 20:
-        game_is_on = False
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce_y()
+    if ball.distance(r_paddle) < 50 and ball.xcor() > 320 or ball.distance(l_paddle) < 50 and ball.xcor() < -320:
+        ball.bounce_x()
+
+
     screen.update()
 
 
